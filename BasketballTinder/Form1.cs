@@ -12,6 +12,7 @@ namespace BasketballTinder
 {
     public partial class Form1 : Form
     {
+        public static string SetValueForName = "";
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +21,30 @@ namespace BasketballTinder
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void creditsBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Designed by: \nRadu Lamoran \nGabriel Palasanu \nDragos Cont \n\n\nGuidance: Bogdan Iuga");
+        }
+
+        private void StartApp_Btn_Click(object sender, EventArgs e)
+        {
+            if (inputNameTxtBox.Text == "")
+            {
+                MessageBox.Show("Please enter your name...");
+            }
+            else 
+            {
+                SetValueForName = inputNameTxtBox.Text;
+
+                Form2 f2 = new Form2();
+                
+                
+                f2.Show();
+                this.Hide();
+
+            }
         }
     }
 }
