@@ -32,7 +32,7 @@ namespace BasketballTinder
         {
             if (inputNameTxtBox.Text == "")
             {
-                MessageBox.Show("Please enter your name...");
+                MessageBox.Show("Please enter your name....");
             }
             else 
             {
