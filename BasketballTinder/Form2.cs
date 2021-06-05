@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace BasketballTinder
 {
     public partial class Form2 : Form
-    {
+    {  
         public Form2()
         {
             InitializeComponent();
@@ -46,6 +46,7 @@ namespace BasketballTinder
             }
 
             terrainsPictureBox.Image = terrainsImageList.Images[countImages];
+            detailsTerrain.Text = "aa";
         }
     }
 }
