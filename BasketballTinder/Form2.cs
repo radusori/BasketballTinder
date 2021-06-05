@@ -31,22 +31,48 @@ namespace BasketballTinder
         private void button2_Click(object sender, EventArgs e)
         {
             if (countImages < 2) 
-            {
+            { 
+                if (countImages == 0)
+                {
+                    detailsTerrain.Text = "Imagine 0";
+                }
+                else if (countImages == 1)
+                {
+                    detailsTerrain.Text = "Imagine 1";
+                }
+                else if (countImages == 2)
+                {
+                    detailsTerrain.Text = "Imagine 2";
+                }
+                
                 countImages++;
             }
 
             terrainsPictureBox.Image = terrainsImageList.Images[countImages];
+            
         }
 
         private void prevBtn_Click(object sender, EventArgs e)
         {
             if (countImages > 0) 
             {
+                if (countImages == 2)
+                {
+                    detailsTerrain.Text = "Imagine 2";
+                }
+                else if (countImages == 1)
+                {
+                    detailsTerrain.Text = "Imagine 1";
+                }
+                else if (countImages == 0)
+                {
+                    detailsTerrain.Text = "Imagine 0";
+                }
                 countImages--;
             }
 
             terrainsPictureBox.Image = terrainsImageList.Images[countImages];
-            detailsTerrain.Text = "aa";
+            
         }
     }
 }

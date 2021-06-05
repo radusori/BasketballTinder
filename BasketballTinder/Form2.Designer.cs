@@ -79,8 +79,7 @@ namespace BasketballTinder
             // 
             // terrainsPictureBox
             // 
-            this.terrainsPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("terrainsPictureBox.Image")));
-            this.terrainsPictureBox.InitialImage = null;
+            this.terrainsPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("terrainsPictureBox.InitialImage")));
             this.terrainsPictureBox.Location = new System.Drawing.Point(338, 9);
             this.terrainsPictureBox.Name = "terrainsPictureBox";
             this.terrainsPictureBox.Size = new System.Drawing.Size(869, 442);
