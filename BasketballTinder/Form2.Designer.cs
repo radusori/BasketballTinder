@@ -79,6 +79,7 @@ namespace BasketballTinder
             // 
             // terrainsPictureBox
             // 
+            this.terrainsPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("terrainsPictureBox.BackgroundImage")));
             this.terrainsPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("terrainsPictureBox.InitialImage")));
             this.terrainsPictureBox.Location = new System.Drawing.Point(338, 9);
             this.terrainsPictureBox.Name = "terrainsPictureBox";
@@ -126,18 +127,18 @@ namespace BasketballTinder
             // 
             this.terrainsImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("terrainsImageList.ImageStream")));
             this.terrainsImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.terrainsImageList.Images.SetKeyName(0, "BasketTerrainClubTransilvania.jpg");
-            this.terrainsImageList.Images.SetKeyName(1, "BasketTerrainGheorgheni.jpg");
-            this.terrainsImageList.Images.SetKeyName(2, "BasketTerrainOH.jpg");
+            this.terrainsImageList.Images.SetKeyName(0, "BasketTerrainGheorgheni.jpg");
+            this.terrainsImageList.Images.SetKeyName(1, "bt arena-outdoor.jpg");
+            this.terrainsImageList.Images.SetKeyName(2, "Intre-Lacuri.jpg");
+            this.terrainsImageList.Images.SetKeyName(3, "parcul rozelor.jpg");
             // 
             // detailsTerrain
             // 
             this.detailsTerrain.AutoSize = true;
             this.detailsTerrain.Location = new System.Drawing.Point(392, 467);
             this.detailsTerrain.Name = "detailsTerrain";
-            this.detailsTerrain.Size = new System.Drawing.Size(180, 13);
+            this.detailsTerrain.Size = new System.Drawing.Size(0, 13);
             this.detailsTerrain.TabIndex = 12;
-            this.detailsTerrain.Text = "Details about terrain shown in image ";
             // 
             // ViewAttendenceBtn
             // 

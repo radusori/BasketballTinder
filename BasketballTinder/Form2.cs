@@ -30,8 +30,8 @@ namespace BasketballTinder
         int countImages = 0;
         private void button2_Click(object sender, EventArgs e)
         {
-            if (countImages < 2) 
-            { 
+            if (countImages < 3) 
+            {
                 if (countImages == 0)
                 {
                     detailsTerrain.Text = "Imagine 0";
@@ -44,7 +44,12 @@ namespace BasketballTinder
                 {
                     detailsTerrain.Text = "Imagine 2";
                 }
-                
+                else if (countImages == 3) 
+                {
+                    detailsTerrain.Text = "Imagine 3";
+
+                }
+
                 countImages++;
             }
 
@@ -56,7 +61,11 @@ namespace BasketballTinder
         {
             if (countImages > 0) 
             {
-                if (countImages == 2)
+                if (countImages == 3)
+                {
+                    detailsTerrain.Text = "Imagine 3";
+                }
+                else if (countImages == 2)
                 {
                     detailsTerrain.Text = "Imagine 2";
                 }
@@ -67,6 +76,7 @@ namespace BasketballTinder
                 else if (countImages == 0)
                 {
                     detailsTerrain.Text = "Imagine 0";
+
                 }
                 countImages--;
             }
