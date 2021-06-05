@@ -96,6 +96,7 @@
             this.inputNameTxtBox.Name = "inputNameTxtBox";
             this.inputNameTxtBox.Size = new System.Drawing.Size(236, 20);
             this.inputNameTxtBox.TabIndex = 5;
+            this.inputNameTxtBox.TextChanged += new System.EventHandler(this.inputNameTxtBox_TextChanged);
             // 
             // Form1
             // 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace BasketballTinder
 {
     public partial class Form2 : Form
-    {  
+    {
         public Form2()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace BasketballTinder
         int countImages = 0;
         private void button2_Click(object sender, EventArgs e)
         {
-            if (countImages < 3) 
+            if (countImages < 3)
             {
                 if (countImages == 0)
                 {
@@ -44,7 +44,7 @@ namespace BasketballTinder
                 {
                     detailsTerrain.Text = "Imagine 2";
                 }
-                else if (countImages == 3) 
+                else if (countImages == 3)
                 {
                     detailsTerrain.Text = "Imagine 3";
 
@@ -54,12 +54,12 @@ namespace BasketballTinder
             }
 
             terrainsPictureBox.Image = terrainsImageList.Images[countImages];
-            
+
         }
 
         private void prevBtn_Click(object sender, EventArgs e)
         {
-            if (countImages > 0) 
+            if (countImages > 0)
             {
                 if (countImages == 3)
                 {
@@ -82,7 +82,19 @@ namespace BasketballTinder
             }
 
             terrainsPictureBox.Image = terrainsImageList.Images[countImages];
-            
+
+        }
+
+        private void chooseTerrainBtn_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
+            this.Hide();
+        }
+
+        private void nameFromInput_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

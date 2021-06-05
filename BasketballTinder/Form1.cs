@@ -46,5 +46,10 @@ namespace BasketballTinder
 
             }
         }
+
+        private void inputNameTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

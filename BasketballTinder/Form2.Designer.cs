@@ -56,6 +56,7 @@ namespace BasketballTinder
             this.nameFromInput.Size = new System.Drawing.Size(98, 24);
             this.nameFromInput.TabIndex = 0;
             this.nameFromInput.Text = "userName";
+            this.nameFromInput.Click += new System.EventHandler(this.nameFromInput_Click);
             // 
             // button1
             // 
@@ -122,6 +123,7 @@ namespace BasketballTinder
             this.chooseTerrainBtn.TabIndex = 8;
             this.chooseTerrainBtn.Text = "CHOOSE TERRAIN";
             this.chooseTerrainBtn.UseVisualStyleBackColor = false;
+            this.chooseTerrainBtn.Click += new System.EventHandler(this.chooseTerrainBtn_Click);
             // 
             // terrainsImageList
             // 

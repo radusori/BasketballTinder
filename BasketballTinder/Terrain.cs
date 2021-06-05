@@ -8,7 +8,7 @@ namespace BasketballTinder
 {
     public class Terrain
     {
-        public int Index { get; set; }
+        public int Index { get ; set; }
         public string ImagePath { get; set; }
         public string TerrainDetails { get; set; }
     }
