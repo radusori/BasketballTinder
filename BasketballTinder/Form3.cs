@@ -30,7 +30,15 @@ namespace BasketballTinder
 
         private void SaveAttForm3_Click(object sender, EventArgs e)
         {
-         
+            var a = new Appointment()
+            {
+                Date = DateTime.Now,
+                UserName = "bla bla",
+                Terrain = "anything",
+                TerrainId= 1
+            };
+
+            GlobalVar.AppointmentsList.Add(a);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

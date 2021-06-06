@@ -30,7 +30,9 @@ namespace BasketballTinder
         int countImages = 0;
         private void button2_Click(object sender, EventArgs e)
         {
-            if (countImages < 3)
+            countImages++;
+
+            if (countImages <= 3)
             {
                 if (countImages == 0)
                 {
@@ -50,16 +52,22 @@ namespace BasketballTinder
 
                 }
 
-                countImages++;
+                terrainsPictureBox.Image = terrainsImageList.Images[countImages];
+
+            }
+            else {
+                countImages--;
+                MessageBox.Show("This is the end!");
             }
 
-            terrainsPictureBox.Image = terrainsImageList.Images[countImages];
 
         }
 
         private void prevBtn_Click(object sender, EventArgs e)
         {
-            if (countImages > 0)
+            countImages--;
+
+            if (countImages >= 0)
             {
                 if (countImages == 3)
                 {
@@ -78,10 +86,15 @@ namespace BasketballTinder
                     detailsTerrain.Text = "Imagine 0";
 
                 }
-                countImages--;
+
+                terrainsPictureBox.Image = terrainsImageList.Images[countImages];
+
+            }
+            else {
+                countImages++;
+                MessageBox.Show("There are no previous terrains");
             }
 
-            terrainsPictureBox.Image = terrainsImageList.Images[countImages];
 
         }
 
@@ -109,6 +122,11 @@ namespace BasketballTinder
             Form5 f5 = new Form5();
             f5.Show();
             this.Hide();
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
