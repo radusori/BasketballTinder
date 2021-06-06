@@ -96,5 +96,19 @@ namespace BasketballTinder
         {
 
         }
+
+        private void ViewAttendenceBtn_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.Show();
+            this.Hide();
+        }
+
+        private void UpdateAttendenceBtn_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+            f5.Show();
+            this.Hide();
+        }
     }
 }

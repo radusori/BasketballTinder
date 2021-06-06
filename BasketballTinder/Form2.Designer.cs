@@ -150,6 +150,7 @@ namespace BasketballTinder
             this.ViewAttendenceBtn.TabIndex = 13;
             this.ViewAttendenceBtn.Text = "VIEW ATTENDENCE";
             this.ViewAttendenceBtn.UseVisualStyleBackColor = true;
+            this.ViewAttendenceBtn.Click += new System.EventHandler(this.ViewAttendenceBtn_Click);
             // 
             // DeleteAttendanceBtn
             // 
@@ -168,6 +169,7 @@ namespace BasketballTinder
             this.UpdateAttendenceBtn.TabIndex = 16;
             this.UpdateAttendenceBtn.Text = "UPDATE ATTENDENCE";
             this.UpdateAttendenceBtn.UseVisualStyleBackColor = true;
+            this.UpdateAttendenceBtn.Click += new System.EventHandler(this.UpdateAttendenceBtn_Click);
             // 
             // Form2
             // 
@@ -185,6 +187,7 @@ namespace BasketballTinder
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nameFromInput);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basketball Terrain Tinder";

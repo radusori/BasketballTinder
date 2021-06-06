@@ -34,6 +34,7 @@
             this.Ora = new System.Windows.Forms.Label();
             this.SaveAttForm3 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // input
@@ -75,7 +76,7 @@
             // 
             // SaveAttForm3
             // 
-            this.SaveAttForm3.Location = new System.Drawing.Point(169, 216);
+            this.SaveAttForm3.Location = new System.Drawing.Point(12, 214);
             this.SaveAttForm3.Name = "SaveAttForm3";
             this.SaveAttForm3.Size = new System.Drawing.Size(107, 35);
             this.SaveAttForm3.TabIndex = 5;
@@ -85,17 +86,29 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker2.CustomFormat = "HH:mm";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(44, 71);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(191, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(61, 20);
             this.dateTimePicker2.TabIndex = 6;
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(197, 226);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(75, 23);
+            this.BackBtn.TabIndex = 7;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.SaveAttForm3);
             this.Controls.Add(this.Ora);
@@ -103,7 +116,8 @@
             this.Controls.Add(this.DataCitita);
             this.Controls.Add(this.input);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add Attendence";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,6 +131,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Ora;
         private System.Windows.Forms.Button SaveAttForm3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button BackBtn;
     }
 }
