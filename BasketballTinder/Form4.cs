@@ -17,14 +17,11 @@ namespace BasketballTinder
             InitializeComponent();
         }
 
-        private void BackBtn_Click(object sender, EventArgs e)
+        private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form2 f2 = new Form2();
+             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
-
-          
         }
-
     }
 }

@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Ora = new System.Windows.Forms.Label();
             this.SaveAttForm3 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.OraCitita = new System.Windows.Forms.DateTimePicker();
             this.BackBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -84,14 +84,14 @@
             this.SaveAttForm3.UseVisualStyleBackColor = true;
             this.SaveAttForm3.Click += new System.EventHandler(this.SaveAttForm3_Click);
             // 
-            // dateTimePicker2
+            // OraCitita
             // 
-            this.dateTimePicker2.CustomFormat = "HH:mm";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(44, 71);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(61, 20);
-            this.dateTimePicker2.TabIndex = 6;
+            this.OraCitita.CustomFormat = "HH:mm";
+            this.OraCitita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.OraCitita.Location = new System.Drawing.Point(44, 71);
+            this.OraCitita.Name = "OraCitita";
+            this.OraCitita.Size = new System.Drawing.Size(61, 20);
+            this.OraCitita.TabIndex = 6;
             // 
             // BackBtn
             // 
@@ -109,7 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.BackBtn);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.OraCitita);
             this.Controls.Add(this.SaveAttForm3);
             this.Controls.Add(this.Ora);
             this.Controls.Add(this.label1);
@@ -131,7 +131,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Ora;
         private System.Windows.Forms.Button SaveAttForm3;
-        public System.Windows.Forms.DateTimePicker dateTimePicker2;
+        public System.Windows.Forms.DateTimePicker OraCitita;
         private System.Windows.Forms.Button BackBtn;
     }
 }

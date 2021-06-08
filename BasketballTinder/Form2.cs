@@ -22,11 +22,6 @@ namespace BasketballTinder
             nameFromInput.Text = Form1.SetValueForName;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.ExitThread();
-        }
-
         int countImages = 0;
         private void button2_Click(object sender, EventArgs e)
         {
@@ -36,19 +31,19 @@ namespace BasketballTinder
             {
                 if (countImages == 0)
                 {
-                    detailsTerrain.Text = "Imagine 0";
+                    detailsTerrain.Text = "BAZA GHEORGHENI\n Address: Str. Alexandru Vaida Voevod";
                 }
                 else if (countImages == 1)
                 {
-                    detailsTerrain.Text = "Imagine 1";
+                    detailsTerrain.Text = "BT ARENA\n Address: Str. Uzinei Electrice";
                 }
                 else if (countImages == 2)
                 {
-                    detailsTerrain.Text = "Imagine 2";
+                    detailsTerrain.Text = "TEREN INTRE LACURI\n Address: Str.Tulcea";
                 }
                 else if (countImages == 3)
                 {
-                    detailsTerrain.Text = "Imagine 3";
+                    detailsTerrain.Text = "PARCUL ROZELOR\n Address: Str.Plopilor";
 
                 }
 
@@ -71,19 +66,19 @@ namespace BasketballTinder
             {
                 if (countImages == 3)
                 {
-                    detailsTerrain.Text = "Imagine 3";
+                    detailsTerrain.Text = "PARCUL ROZELOR\n Address: Str.Plopilor";
                 }
                 else if (countImages == 2)
                 {
-                    detailsTerrain.Text = "Imagine 2";
+                    detailsTerrain.Text = "TEREN INTRE LACURI\n Address: Str.Tulcea";
                 }
                 else if (countImages == 1)
                 {
-                    detailsTerrain.Text = "Imagine 1";
+                    detailsTerrain.Text = "BT ARENA\n Address: Str. Uzinei Electrice";
                 }
                 else if (countImages == 0)
                 {
-                    detailsTerrain.Text = "Imagine 0";
+                    detailsTerrain.Text = "BAZA GHEORGHENI\n Address: Str. Alexandru Vaida Voevod";
 
                 }
 
@@ -126,7 +121,16 @@ namespace BasketballTinder
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide(); ;
+        }
+
+        private void DeleteAttendanceBtn_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+            f6.Show();
+            this.Hide(); ;
         }
     }
 }

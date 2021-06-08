@@ -32,7 +32,6 @@ namespace BasketballTinder
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.nameFromInput = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.terrainsPictureBox = new System.Windows.Forms.PictureBox();
             this.prevBtn = new System.Windows.Forms.Button();
@@ -57,16 +56,6 @@ namespace BasketballTinder
             this.nameFromInput.TabIndex = 0;
             this.nameFromInput.Text = "userName";
             this.nameFromInput.Click += new System.EventHandler(this.nameFromInput_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1133, 644);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -137,10 +126,12 @@ namespace BasketballTinder
             // detailsTerrain
             // 
             this.detailsTerrain.AutoSize = true;
+            this.detailsTerrain.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailsTerrain.Location = new System.Drawing.Point(392, 467);
             this.detailsTerrain.Name = "detailsTerrain";
-            this.detailsTerrain.Size = new System.Drawing.Size(0, 13);
+            this.detailsTerrain.Size = new System.Drawing.Size(418, 58);
             this.detailsTerrain.TabIndex = 12;
+            this.detailsTerrain.Text = "BAZA GHEORGHENI\r\nAddress: Str. Alexandru Vaida Voevod";
             // 
             // ViewAttendenceBtn
             // 
@@ -160,6 +151,7 @@ namespace BasketballTinder
             this.DeleteAttendanceBtn.TabIndex = 15;
             this.DeleteAttendanceBtn.Text = "DELETE ATTENDENCE";
             this.DeleteAttendanceBtn.UseVisualStyleBackColor = true;
+            this.DeleteAttendanceBtn.Click += new System.EventHandler(this.DeleteAttendanceBtn_Click);
             // 
             // UpdateAttendenceBtn
             // 
@@ -185,7 +177,6 @@ namespace BasketballTinder
             this.Controls.Add(this.prevBtn);
             this.Controls.Add(this.terrainsPictureBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.nameFromInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
@@ -202,7 +193,6 @@ namespace BasketballTinder
         #endregion
 
         private System.Windows.Forms.Label nameFromInput;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox terrainsPictureBox;
         private System.Windows.Forms.Button prevBtn;

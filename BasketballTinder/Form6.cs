@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace BasketballTinder
 {
-    public partial class Form5 : Form
+    public partial class Form6 : Form
     {
-        public Form5()
+        public Form6()
         {
             InitializeComponent();
         }
 
-        private void Form5_FormClosing(object sender, FormClosingEventArgs e)
+        private void DeleteBTN_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Attendance was deleted!");
+        }
+
+        private void Form6_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form2 f2 = new Form2();
             f2.Show();

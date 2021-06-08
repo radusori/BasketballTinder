@@ -1,7 +1,7 @@
 ﻿
 namespace BasketballTinder
 {
-    partial class Form5
+    partial class Form6
     {
         /// <summary>
         /// Required designer variable.
@@ -29,21 +29,35 @@ namespace BasketballTinder
         /// </summary>
         private void InitializeComponent()
         {
+            this.DeleteBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form5
+            // DeleteBTN
+            // 
+            this.DeleteBTN.Location = new System.Drawing.Point(12, 405);
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.Size = new System.Drawing.Size(108, 33);
+            this.DeleteBTN.TabIndex = 0;
+            this.DeleteBTN.Text = "DELETE";
+            this.DeleteBTN.UseVisualStyleBackColor = true;
+            this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
+            // 
+            // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form5";
+            this.ClientSize = new System.Drawing.Size(528, 450);
+            this.Controls.Add(this.DeleteBTN);
+            this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Update Attendance";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form5_FormClosing);
+            this.Text = "Delete Attendance";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form6_FormClosing);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button DeleteBTN;
     }
 }

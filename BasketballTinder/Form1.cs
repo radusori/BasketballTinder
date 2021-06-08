@@ -32,15 +32,13 @@ namespace BasketballTinder
         {
             if (inputNameTxtBox.Text == "")
             {
-                MessageBox.Show("Please enter your name...");
+                MessageBox.Show("Please enter your email...");
             }
             else 
             {
                 SetValueForName = inputNameTxtBox.Text;
 
                 Form2 f2 = new Form2();
-                
-                
                 f2.Show();
                 this.Hide();
 
@@ -50,6 +48,11 @@ namespace BasketballTinder
         private void inputNameTxtBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

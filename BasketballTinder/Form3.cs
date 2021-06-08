@@ -12,7 +12,8 @@ namespace BasketballTinder
 {
     public partial class Form3 : Form
     {
-        public static int SetValueForTime;
+        public static DateTime SetValueForDate;
+        public static DateTime SetValueForTime;
         public Form3()
         {
             InitializeComponent();
@@ -32,10 +33,11 @@ namespace BasketballTinder
         {
             var a = new Appointment()
             {
-                Date = DateTime.Now,
-                UserName = "bla bla",
-                Terrain = "anything",
-                TerrainId= 1
+                Date = SetValueForDate,
+                Time = SetValueForTime,
+                UserName = Form1.SetValueForName,
+               // Terrain = "anything",
+                TerrainId = 1
             };
 
             GlobalVar.AppointmentsList.Add(a);

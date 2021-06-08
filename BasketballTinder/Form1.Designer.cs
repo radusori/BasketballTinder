@@ -86,9 +86,9 @@
             this.nameForm1lbl.Font = new System.Drawing.Font("Goudy Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameForm1lbl.Location = new System.Drawing.Point(50, 426);
             this.nameForm1lbl.Name = "nameForm1lbl";
-            this.nameForm1lbl.Size = new System.Drawing.Size(124, 21);
+            this.nameForm1lbl.Size = new System.Drawing.Size(123, 21);
             this.nameForm1lbl.TabIndex = 4;
-            this.nameForm1lbl.Text = "Enter your name:";
+            this.nameForm1lbl.Text = "Enter your email:";
             // 
             // inputNameTxtBox
             // 
@@ -112,6 +112,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basketball Terrain Tinder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureFormStart)).EndInit();
             this.ResumeLayout(false);
