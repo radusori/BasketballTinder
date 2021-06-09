@@ -45,7 +45,7 @@ namespace BasketballTinder
             var attendence = GlobalVar.AppointmentsList.FirstOrDefault(ac => ac.TerrainId == GlobalVar.TerrainId && ac.UserName == Form1.SetValueForName);
             if (attendence != null)
             {
-                GlobalVar.AppointmentsList.Remove(attendence);
+                GlobalVar.AppointmentsList.Remove(attendence);//
             }
         }
 
