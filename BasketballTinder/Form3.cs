@@ -12,8 +12,6 @@ namespace BasketballTinder
 {
     public partial class Form3 : Form
     {
-        public static DateTime SetValueForDate;
-        public static DateTime SetValueForTime;
         public Form3()
         {
             InitializeComponent();
@@ -34,13 +32,14 @@ namespace BasketballTinder
             var a = new Appointment()
             {
                 Date = DataCitita.Value,
-                Time = OraCitita.Value,
+                TimeHour = Convert.ToInt32(HourFromUser.Value),
+                TimeMins = Convert.ToInt32(MinsFromUser.Value),
                 UserName = Form1.SetValueForName,
-                // Terrain = "anything",
                 TerrainId = GlobalVar.TerrainId
             };
 
             GlobalVar.AppointmentsList.Add(a);
+
             var filteredlist = GlobalVar.AppointmentsList.Where(ab => ab.TerrainId == GlobalVar.TerrainId).ToList();//de pus in viewappointment
             var attendence = GlobalVar.AppointmentsList.FirstOrDefault(ac => ac.TerrainId == GlobalVar.TerrainId && ac.UserName == Form1.SetValueForName);
             if (attendence != null)
