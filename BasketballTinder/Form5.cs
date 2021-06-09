@@ -49,9 +49,9 @@ namespace BasketballTinder
             var a = new Appointment()
             {
                 Date = DataCitita.Value,
-                Time = OraCitita.Value,
+                TimeHour = Convert.ToInt32(HourFromUser.Value),
+                TimeMins = Convert.ToInt32(MinsFromUser.Value),
                 UserName = Form1.SetValueForName,
-                // Terrain = "anything",
                 TerrainId = GlobalVar.TerrainId
             };
         }
