@@ -28,5 +28,37 @@ namespace BasketballTinder
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataCitita_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var a = new Appointment()
+            {
+                Date = DataCitita.Value,
+                Time = OraCitita.Value,
+                UserName = Form1.SetValueForName,
+                // Terrain = "anything",
+                TerrainId = GlobalVar.TerrainId
+            };
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

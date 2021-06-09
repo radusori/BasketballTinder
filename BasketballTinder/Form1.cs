@@ -54,5 +54,10 @@ namespace BasketballTinder
         {
             Application.Exit();
         }
+
+        private void pictureFormStart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -59,5 +59,15 @@ namespace BasketballTinder
             f2.Show();
             this.Hide();
         }
+
+        private void OraCitita_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
