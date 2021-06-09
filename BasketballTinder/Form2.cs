@@ -48,7 +48,7 @@ namespace BasketballTinder
                 }
 
                 terrainsPictureBox.Image = terrainsImageList.Images[countImages];
-
+                GlobalVar.TerrainId = countImages;
             }
             else {
                 countImages--;
@@ -83,7 +83,7 @@ namespace BasketballTinder
                 }
 
                 terrainsPictureBox.Image = terrainsImageList.Images[countImages];
-
+                GlobalVar.TerrainId = countImages;
             }
             else {
                 countImages++;

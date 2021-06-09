@@ -33,14 +33,20 @@ namespace BasketballTinder
         {
             var a = new Appointment()
             {
-                Date = SetValueForDate,
-                Time = SetValueForTime,
+                Date = DataCitita.Value,
+                Time = OraCitita.Value,
                 UserName = Form1.SetValueForName,
-               // Terrain = "anything",
-                TerrainId = 1
+                // Terrain = "anything",
+                TerrainId = GlobalVar.TerrainId
             };
 
             GlobalVar.AppointmentsList.Add(a);
+            var filteredlist = GlobalVar.AppointmentsList.Where(ab => ab.TerrainId == GlobalVar.TerrainId).ToList();//de pus in viewappointment
+            var attendence = GlobalVar.AppointmentsList.FirstOrDefault(ac => ac.TerrainId == GlobalVar.TerrainId && ac.UserName == Form1.SetValueForName);
+            if (attendence != null)
+            {
+                GlobalVar.AppointmentsList.Remove(attendence);
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

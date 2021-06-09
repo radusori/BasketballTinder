@@ -9,5 +9,6 @@ namespace BasketballTinder
     public static class GlobalVar
     {
         public static List<Appointment> AppointmentsList = new List<Appointment>();
+        public static int TerrainId;
     }
 }
