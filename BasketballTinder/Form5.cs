@@ -15,6 +15,15 @@ namespace BasketballTinder
         public Form5()
         {
             InitializeComponent();
+
+            var filteredlist = GlobalVar.AppointmentsList.Where(ab => ab.TerrainId == GlobalVar.TerrainId).ToList();
+
+            foreach (var appointment in filteredlist)
+            {
+                var item = new ListViewItem(new[] { appointment.UserName, appointment.Date.ToString(), appointment.TimeHour.ToString(),
+                    appointment.TimeMins.ToString(), appointment.TerrainName });
+                listView1.Items.Add(item);
+            }
         }
 
         private void Form5_FormClosing(object sender, FormClosingEventArgs e)
@@ -46,14 +55,39 @@ namespace BasketballTinder
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var a = new Appointment()
+            var b = new Appointment()
             {
-                Date = DataCitita.Value,
-                TimeHour = Convert.ToInt32(HourFromUser.Value),
-                TimeMins = Convert.ToInt32(MinsFromUser.Value),
+                Date = DataCitita1.Value,
+                TimeHour = Convert.ToInt32(HourFromUser1.Value),
+                TimeMins = Convert.ToInt32(MinsFromUser1.Value),
                 UserName = Form1.SetValueForName,
                 TerrainId = GlobalVar.TerrainId
             };
+            var attendence = GlobalVar.AppointmentsList.FirstOrDefault(ac => ac.TerrainId == GlobalVar.TerrainId && ac.UserName == Form1.SetValueForName);
+
+            var indexOf = GlobalVar.AppointmentsList.IndexOf(attendence);
+            DataCitita1.Value = GlobalVar.AppointmentsList[indexOf].Date ;
+            HourFromUser1.Value = GlobalVar.AppointmentsList[indexOf].TimeHour;
+            MinsFromUser1.Value = GlobalVar.AppointmentsList[indexOf].TimeMins;
+
+            if (attendence != null)
+            {
+                GlobalVar.AppointmentsList.Remove(attendence);//
+            }
+
+            GlobalVar.AppointmentsList.Add(b);
+
+            var filteredlist = GlobalVar.AppointmentsList.Where(ab => ab.TerrainId == GlobalVar.TerrainId).ToList();
+
+            foreach (var appointment in filteredlist)
+            {
+                var item = new ListViewItem(new[] { appointment.UserName, appointment.Date.ToString(), appointment.TimeHour.ToString(),
+                    appointment.TimeMins.ToString(), appointment.TerrainName });
+                listView1.Items.Add(item);
+            }
+
+            MessageBox.Show("Attendance was updated");
+
         }
 
         private void label1_Click(object sender, EventArgs e)

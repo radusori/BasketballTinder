@@ -12,6 +12,8 @@ namespace BasketballTinder
         public DateTime Date { get; set; }
         public int TimeHour { get; set; }
         public int TimeMins { get; set; }
+        public string TerrainName { get; set; }
         public int TerrainId { get; set; }
+        
     }
 }

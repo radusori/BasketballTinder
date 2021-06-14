@@ -36,7 +36,7 @@ namespace BasketballTinder
             this.AppointmentDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TimeHour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TimeMins = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TerrainId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TerrainName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +66,7 @@ namespace BasketballTinder
             this.AppointmentDate,
             this.TimeHour,
             this.TimeMins,
-            this.TerrainId});
+            this.TerrainName});
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(25, 54);
             this.listView1.Name = "listView1";
@@ -82,8 +82,8 @@ namespace BasketballTinder
             // 
             // AppointmentDate
             // 
-            this.AppointmentDate.Text = "Appointment Date";
-            this.AppointmentDate.Width = 106;
+            this.AppointmentDate.Text = "Date";
+            this.AppointmentDate.Width = 70;
             // 
             // TimeHour
             // 
@@ -95,10 +95,10 @@ namespace BasketballTinder
             this.TimeMins.Text = "Minutes";
             this.TimeMins.Width = 58;
             // 
-            // TerrainId
+            // TerrainName
             // 
-            this.TerrainId.Text = "Terrain Id";
-            this.TerrainId.Width = 71;
+            this.TerrainName.Text = "Terrain Name";
+            this.TerrainName.Width = 71;
             // 
             // Form4
             // 
@@ -127,6 +127,6 @@ namespace BasketballTinder
         private System.Windows.Forms.ColumnHeader AppointmentDate;
         private System.Windows.Forms.ColumnHeader TimeHour;
         private System.Windows.Forms.ColumnHeader TimeMins;
-        private System.Windows.Forms.ColumnHeader TerrainId;
+        private System.Windows.Forms.ColumnHeader TerrainName;
     }
 }

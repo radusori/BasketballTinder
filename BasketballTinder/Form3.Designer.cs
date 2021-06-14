@@ -56,10 +56,13 @@
             // 
             // DataCitita
             // 
+            this.DataCitita.CustomFormat = "MM/dd/yyyy";
+            this.DataCitita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DataCitita.Location = new System.Drawing.Point(44, 34);
             this.DataCitita.Name = "DataCitita";
             this.DataCitita.Size = new System.Drawing.Size(191, 20);
             this.DataCitita.TabIndex = 1;
+            this.DataCitita.Value = new System.DateTime(2021, 6, 14, 22, 29, 7, 0);
             this.DataCitita.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label1

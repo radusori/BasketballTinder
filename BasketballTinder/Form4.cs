@@ -20,7 +20,7 @@ namespace BasketballTinder
            
             foreach (var appointment in filteredlist) {
                 var item = new ListViewItem(new[] { appointment.UserName, appointment.Date.ToString(), appointment.TimeHour.ToString(), 
-                    appointment.TimeMins.ToString(), appointment.TerrainId.ToString() });
+                    appointment.TimeMins.ToString(), appointment.TerrainName });
                 listView1.Items.Add(item);
             }
         }

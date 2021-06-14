@@ -33,15 +33,21 @@ namespace BasketballTinder
             this.label2 = new System.Windows.Forms.Label();
             this.SaveAttForm5 = new System.Windows.Forms.Button();
             this.AttendanceShow = new System.Windows.Forms.Label();
-            this.DataCitita = new System.Windows.Forms.DateTimePicker();
+            this.DataCitita1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.HourFromUser = new System.Windows.Forms.NumericUpDown();
-            this.MinsFromUser = new System.Windows.Forms.NumericUpDown();
+            this.HourFromUser1 = new System.Windows.Forms.NumericUpDown();
+            this.MinsFromUser1 = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.HourFromUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MinsFromUser)).BeginInit();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.UserEmail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.AppointmentDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TimeHour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TimeMins = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TerrainName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            ((System.ComponentModel.ISupportInitialize)(this.HourFromUser1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinsFromUser1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,11 +74,11 @@ namespace BasketballTinder
             // SaveAttForm5
             // 
             this.SaveAttForm5.Location = new System.Drawing.Point(40, 382);
-            this.SaveAttForm5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SaveAttForm5.Margin = new System.Windows.Forms.Padding(2);
             this.SaveAttForm5.Name = "SaveAttForm5";
-            this.SaveAttForm5.Size = new System.Drawing.Size(105, 40);
+            this.SaveAttForm5.Size = new System.Drawing.Size(132, 40);
             this.SaveAttForm5.TabIndex = 4;
-            this.SaveAttForm5.Text = "Save Attendance";
+            this.SaveAttForm5.Text = "Update Attendance";
             this.SaveAttForm5.UseVisualStyleBackColor = true;
             this.SaveAttForm5.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -86,13 +92,13 @@ namespace BasketballTinder
             this.AttendanceShow.TabIndex = 5;
             this.AttendanceShow.Click += new System.EventHandler(this.label3_Click);
             // 
-            // DataCitita
+            // DataCitita1
             // 
-            this.DataCitita.Location = new System.Drawing.Point(466, 54);
-            this.DataCitita.Name = "DataCitita";
-            this.DataCitita.Size = new System.Drawing.Size(191, 20);
-            this.DataCitita.TabIndex = 7;
-            this.DataCitita.ValueChanged += new System.EventHandler(this.DataCitita_ValueChanged);
+            this.DataCitita1.Location = new System.Drawing.Point(466, 54);
+            this.DataCitita1.Name = "DataCitita1";
+            this.DataCitita1.Size = new System.Drawing.Size(191, 20);
+            this.DataCitita1.TabIndex = 7;
+            this.DataCitita1.ValueChanged += new System.EventHandler(this.DataCitita_ValueChanged);
             // 
             // label4
             // 
@@ -124,29 +130,29 @@ namespace BasketballTinder
             this.label5.TabIndex = 11;
             this.label5.Text = "Hour";
             // 
-            // HourFromUser
+            // HourFromUser1
             // 
-            this.HourFromUser.Location = new System.Drawing.Point(466, 120);
-            this.HourFromUser.Maximum = new decimal(new int[] {
+            this.HourFromUser1.Location = new System.Drawing.Point(466, 120);
+            this.HourFromUser1.Maximum = new decimal(new int[] {
             24,
             0,
             0,
             0});
-            this.HourFromUser.Name = "HourFromUser";
-            this.HourFromUser.Size = new System.Drawing.Size(45, 20);
-            this.HourFromUser.TabIndex = 12;
+            this.HourFromUser1.Name = "HourFromUser1";
+            this.HourFromUser1.Size = new System.Drawing.Size(45, 20);
+            this.HourFromUser1.TabIndex = 12;
             // 
-            // MinsFromUser
+            // MinsFromUser1
             // 
-            this.MinsFromUser.Location = new System.Drawing.Point(533, 120);
-            this.MinsFromUser.Maximum = new decimal(new int[] {
+            this.MinsFromUser1.Location = new System.Drawing.Point(533, 120);
+            this.MinsFromUser1.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.MinsFromUser.Name = "MinsFromUser";
-            this.MinsFromUser.Size = new System.Drawing.Size(45, 20);
-            this.MinsFromUser.TabIndex = 13;
+            this.MinsFromUser1.Name = "MinsFromUser1";
+            this.MinsFromUser1.Size = new System.Drawing.Size(45, 20);
+            this.MinsFromUser1.TabIndex = 13;
             // 
             // label6
             // 
@@ -159,18 +165,60 @@ namespace BasketballTinder
             this.label6.TabIndex = 14;
             this.label6.Text = ":";
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.UserEmail,
+            this.AppointmentDate,
+            this.TimeHour,
+            this.TimeMins,
+            this.TerrainName});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(12, 88);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(343, 244);
+            this.listView1.TabIndex = 15;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // UserEmail
+            // 
+            this.UserEmail.Text = "User Email";
+            this.UserEmail.Width = 89;
+            // 
+            // AppointmentDate
+            // 
+            this.AppointmentDate.Text = "Date";
+            this.AppointmentDate.Width = 70;
+            // 
+            // TimeHour
+            // 
+            this.TimeHour.Text = "Hour";
+            this.TimeHour.Width = 48;
+            // 
+            // TimeMins
+            // 
+            this.TimeMins.Text = "Minutes";
+            this.TimeMins.Width = 51;
+            // 
+            // TerrainName
+            // 
+            this.TerrainName.Text = "Terrain Name";
+            this.TerrainName.Width = 108;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.MinsFromUser);
-            this.Controls.Add(this.HourFromUser);
+            this.Controls.Add(this.MinsFromUser1);
+            this.Controls.Add(this.HourFromUser1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.DataCitita);
+            this.Controls.Add(this.DataCitita1);
             this.Controls.Add(this.AttendanceShow);
             this.Controls.Add(this.SaveAttForm5);
             this.Controls.Add(this.label2);
@@ -180,8 +228,8 @@ namespace BasketballTinder
             this.Text = "Update Attendance";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form5_FormClosing);
             this.Load += new System.EventHandler(this.Form5_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.HourFromUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MinsFromUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HourFromUser1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinsFromUser1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,12 +241,18 @@ namespace BasketballTinder
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button SaveAttForm5;
         private System.Windows.Forms.Label AttendanceShow;
-        private System.Windows.Forms.DateTimePicker DataCitita;
+        private System.Windows.Forms.DateTimePicker DataCitita1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown HourFromUser;
-        private System.Windows.Forms.NumericUpDown MinsFromUser;
+        private System.Windows.Forms.NumericUpDown HourFromUser1;
+        private System.Windows.Forms.NumericUpDown MinsFromUser1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader UserEmail;
+        private System.Windows.Forms.ColumnHeader AppointmentDate;
+        private System.Windows.Forms.ColumnHeader TimeHour;
+        private System.Windows.Forms.ColumnHeader TimeMins;
+        private System.Windows.Forms.ColumnHeader TerrainName;
     }
 }

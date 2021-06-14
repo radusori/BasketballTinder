@@ -132,5 +132,10 @@ namespace BasketballTinder
             f6.Show();
             this.Hide(); ;
         }
+
+        private void detailsTerrain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

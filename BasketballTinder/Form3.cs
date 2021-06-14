@@ -35,7 +35,7 @@ namespace BasketballTinder
                 TimeHour = Convert.ToInt32(HourFromUser.Value),
                 TimeMins = Convert.ToInt32(MinsFromUser.Value),
                 UserName = Form1.SetValueForName,
-                TerrainId = GlobalVar.TerrainId
+                TerrainName = GlobalVar.TerrainName           
             };
 
             GlobalVar.AppointmentsList.Add(a);
@@ -45,13 +45,6 @@ namespace BasketballTinder
             Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
-
-
-            var attendence = GlobalVar.AppointmentsList.FirstOrDefault(ac => ac.TerrainId == GlobalVar.TerrainId && ac.UserName == Form1.SetValueForName);
-            if (attendence != null)
-            {
-                GlobalVar.AppointmentsList.Remove(attendence);//
-            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

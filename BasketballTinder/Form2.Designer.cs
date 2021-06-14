@@ -132,6 +132,7 @@ namespace BasketballTinder
             this.detailsTerrain.Size = new System.Drawing.Size(418, 58);
             this.detailsTerrain.TabIndex = 12;
             this.detailsTerrain.Text = "BAZA GHEORGHENI\r\nAddress: Str. Alexandru Vaida Voevod";
+            this.detailsTerrain.Click += new System.EventHandler(this.detailsTerrain_Click);
             // 
             // ViewAttendenceBtn
             // 
