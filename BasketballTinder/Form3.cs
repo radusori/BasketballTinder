@@ -40,7 +40,13 @@ namespace BasketballTinder
 
             GlobalVar.AppointmentsList.Add(a);
 
-            var filteredlist = GlobalVar.AppointmentsList.Where(ab => ab.TerrainId == GlobalVar.TerrainId).ToList();//de pus in viewappointment
+            MessageBox.Show("Attendance saved!");
+
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+
+
             var attendence = GlobalVar.AppointmentsList.FirstOrDefault(ac => ac.TerrainId == GlobalVar.TerrainId && ac.UserName == Form1.SetValueForName);
             if (attendence != null)
             {
@@ -55,9 +61,7 @@ namespace BasketballTinder
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
-            this.Hide();
+           
         }
 
         private void OraCitita_ValueChanged(object sender, EventArgs e)

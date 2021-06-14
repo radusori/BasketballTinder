@@ -15,11 +15,19 @@ namespace BasketballTinder
         public Form4()
         {
             InitializeComponent();
+
+            var filteredlist = GlobalVar.AppointmentsList.Where(ab => ab.TerrainId == GlobalVar.TerrainId).ToList();
+           
+            foreach (var appointment in filteredlist) {
+                var item = new ListViewItem(new[] { appointment.UserName, appointment.Date.ToString(), appointment.TimeHour.ToString(), 
+                    appointment.TimeMins.ToString(), appointment.TerrainId.ToString() });
+                listView1.Items.Add(item);
+            }
         }
 
         private void Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
-             Form2 f2 = new Form2();
+            Form2 f2 = new Form2();
             f2.Show();
             this.Hide();
         }
@@ -27,9 +35,6 @@ namespace BasketballTinder
         private void Form4_Load(object sender, EventArgs e)
         {
             
-            
-
-
         }
     }
 }
