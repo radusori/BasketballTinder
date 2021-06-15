@@ -35,6 +35,7 @@ namespace BasketballTinder
                 TimeHour = Convert.ToInt32(HourFromUser.Value),
                 TimeMins = Convert.ToInt32(MinsFromUser.Value),
                 UserName = Form1.SetValueForName,
+                TerrainId = GlobalVar.TerrainId,
                 TerrainName = GlobalVar.TerrainName           
             };
 

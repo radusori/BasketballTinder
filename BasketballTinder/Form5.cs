@@ -61,14 +61,15 @@ namespace BasketballTinder
                 TimeHour = Convert.ToInt32(HourFromUser1.Value),
                 TimeMins = Convert.ToInt32(MinsFromUser1.Value),
                 UserName = Form1.SetValueForName,
-                TerrainId = GlobalVar.TerrainId
+                TerrainId = GlobalVar.TerrainId,
+                TerrainName = GlobalVar.TerrainName
             };
             var attendence = GlobalVar.AppointmentsList.FirstOrDefault(ac => ac.TerrainId == GlobalVar.TerrainId && ac.UserName == Form1.SetValueForName);
 
             var indexOf = GlobalVar.AppointmentsList.IndexOf(attendence);
-            DataCitita1.Value = GlobalVar.AppointmentsList[indexOf].Date ;
-            HourFromUser1.Value = GlobalVar.AppointmentsList[indexOf].TimeHour;
-            MinsFromUser1.Value = GlobalVar.AppointmentsList[indexOf].TimeMins;
+            //DataCitita1.Value = GlobalVar.AppointmentsList[indexOf].Date ;
+            //HourFromUser1.Value = GlobalVar.AppointmentsList[indexOf].TimeHour;
+            //MinsFromUser1.Value = GlobalVar.AppointmentsList[indexOf].TimeMins;
 
             if (attendence != null)
             {
@@ -81,8 +82,8 @@ namespace BasketballTinder
 
             foreach (var appointment in filteredlist)
             {
-                var item = new ListViewItem(new[] { appointment.UserName, appointment.Date.ToString(), appointment.TimeHour.ToString(),
-                    appointment.TimeMins.ToString(), appointment.TerrainName });
+                var item = new ListViewItem(new[] { appointment.UserName, appointment.Date.ToString("MM/dd/yyyy"), appointment.TimeHour.ToString(),
+                    appointment.TimeMins.ToString(), appointment.TerrainName.ToString() });
                 listView1.Items.Add(item);
             }
 

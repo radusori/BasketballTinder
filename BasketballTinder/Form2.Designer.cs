@@ -42,6 +42,7 @@ namespace BasketballTinder
             this.ViewAttendenceBtn = new System.Windows.Forms.Button();
             this.DeleteAttendanceBtn = new System.Windows.Forms.Button();
             this.UpdateAttendenceBtn = new System.Windows.Forms.Button();
+            this.AddressLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.terrainsPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,9 +130,9 @@ namespace BasketballTinder
             this.detailsTerrain.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailsTerrain.Location = new System.Drawing.Point(392, 467);
             this.detailsTerrain.Name = "detailsTerrain";
-            this.detailsTerrain.Size = new System.Drawing.Size(418, 58);
+            this.detailsTerrain.Size = new System.Drawing.Size(241, 29);
             this.detailsTerrain.TabIndex = 12;
-            this.detailsTerrain.Text = "BAZA GHEORGHENI\r\nAddress: Str. Alexandru Vaida Voevod";
+            this.detailsTerrain.Text = "BAZA GHEORGHENI";
             this.detailsTerrain.Click += new System.EventHandler(this.detailsTerrain_Click);
             // 
             // ViewAttendenceBtn
@@ -166,11 +167,22 @@ namespace BasketballTinder
             this.UpdateAttendenceBtn.UseVisualStyleBackColor = false;
             this.UpdateAttendenceBtn.Click += new System.EventHandler(this.UpdateAttendenceBtn_Click);
             // 
+            // AddressLbl
+            // 
+            this.AddressLbl.AutoSize = true;
+            this.AddressLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressLbl.Location = new System.Drawing.Point(392, 496);
+            this.AddressLbl.Name = "AddressLbl";
+            this.AddressLbl.Size = new System.Drawing.Size(418, 29);
+            this.AddressLbl.TabIndex = 17;
+            this.AddressLbl.Text = "Address: Str. Alexandru Vaida Voevod";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1220, 679);
+            this.Controls.Add(this.AddressLbl);
             this.Controls.Add(this.UpdateAttendenceBtn);
             this.Controls.Add(this.DeleteAttendanceBtn);
             this.Controls.Add(this.ViewAttendenceBtn);
@@ -206,5 +218,6 @@ namespace BasketballTinder
         private System.Windows.Forms.Button ViewAttendenceBtn;
         private System.Windows.Forms.Button DeleteAttendanceBtn;
         private System.Windows.Forms.Button UpdateAttendenceBtn;
+        private System.Windows.Forms.Label AddressLbl;
     }
 }

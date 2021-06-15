@@ -20,6 +20,8 @@ namespace BasketballTinder
         private void Form2_Load(object sender, EventArgs e)
         {
             nameFromInput.Text = Form1.SetValueForName;
+            GlobalVar.TerrainId = 0;
+            GlobalVar.TerrainName = "BAZA GHEORGHENI";
         }
 
         int countImages = 0;
@@ -31,24 +33,33 @@ namespace BasketballTinder
             {
                 if (countImages == 0)
                 {
-                    detailsTerrain.Text = "BAZA GHEORGHENI\n Address: Str. Alexandru Vaida Voevod";
+                    detailsTerrain.Text = "BAZA GHEORGHENI";
+                    AddressLbl.Text = "Address: Str. Alexandru Vaida Voevod";
                 }
                 else if (countImages == 1)
                 {
-                    detailsTerrain.Text = "BT ARENA\n Address: Str. Uzinei Electrice";
+                    detailsTerrain.Text = "BT ARENA";
+                    AddressLbl.Text = "Address: Str. Uzinei Electrice";
+
                 }
                 else if (countImages == 2)
                 {
-                    detailsTerrain.Text = "TEREN INTRE LACURI\n Address: Str.Tulcea";
+                    detailsTerrain.Text = "TEREN INTRE LACURI";
+                    AddressLbl.Text = "Address: Str. Tulcea";
+
                 }
                 else if (countImages == 3)
                 {
-                    detailsTerrain.Text = "PARCUL ROZELOR\n Address: Str.Plopilor";
+                    detailsTerrain.Text = "PARCUL ROZELOR";
+                    AddressLbl.Text = "Address: Str. Plopilor";
+
 
                 }
 
                 terrainsPictureBox.Image = terrainsImageList.Images[countImages];
                 GlobalVar.TerrainId = countImages;
+                GlobalVar.TerrainName = detailsTerrain.Text;
+
             }
             else {
                 countImages--;
@@ -66,24 +77,34 @@ namespace BasketballTinder
             {
                 if (countImages == 3)
                 {
-                    detailsTerrain.Text = "PARCUL ROZELOR\n Address: Str.Plopilor";
+                    detailsTerrain.Text = "PARCUL ROZELOR";
+                    AddressLbl.Text = "Address: Str. Plopilor";
+
                 }
                 else if (countImages == 2)
                 {
-                    detailsTerrain.Text = "TEREN INTRE LACURI\n Address: Str.Tulcea";
+                    detailsTerrain.Text = "TEREN INTRE LACURI";
+                    AddressLbl.Text = "Address: Str. Tulcea";
+
                 }
                 else if (countImages == 1)
                 {
-                    detailsTerrain.Text = "BT ARENA\n Address: Str. Uzinei Electrice";
+                    detailsTerrain.Text = "BT ARENA";
+                    AddressLbl.Text = "Address: Str. Uzinei Electrice";
+
                 }
                 else if (countImages == 0)
                 {
-                    detailsTerrain.Text = "BAZA GHEORGHENI\n Address: Str. Alexandru Vaida Voevod";
+                    detailsTerrain.Text = "BAZA GHEORGHENI";
+                    AddressLbl.Text = "Address: Str. Alexandru Vaida Voevod";
+
 
                 }
 
                 terrainsPictureBox.Image = terrainsImageList.Images[countImages];
                 GlobalVar.TerrainId = countImages;
+                GlobalVar.TerrainName = detailsTerrain.Text;
+
             }
             else {
                 countImages++;
