@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Ora = new System.Windows.Forms.Label();
             this.SaveAttForm3 = new System.Windows.Forms.Button();
-            this.BackBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.HourFromUser = new System.Windows.Forms.NumericUpDown();
@@ -85,23 +84,14 @@
             // 
             // SaveAttForm3
             // 
+            this.SaveAttForm3.BackColor = System.Drawing.Color.Lime;
             this.SaveAttForm3.Location = new System.Drawing.Point(12, 214);
             this.SaveAttForm3.Name = "SaveAttForm3";
             this.SaveAttForm3.Size = new System.Drawing.Size(107, 35);
             this.SaveAttForm3.TabIndex = 5;
             this.SaveAttForm3.Text = "Save Attendance";
-            this.SaveAttForm3.UseVisualStyleBackColor = true;
+            this.SaveAttForm3.UseVisualStyleBackColor = false;
             this.SaveAttForm3.Click += new System.EventHandler(this.SaveAttForm3_Click);
-            // 
-            // BackBtn
-            // 
-            this.BackBtn.Location = new System.Drawing.Point(197, 226);
-            this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(75, 23);
-            this.BackBtn.TabIndex = 7;
-            this.BackBtn.Text = "Back";
-            this.BackBtn.UseVisualStyleBackColor = true;
-            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // label2
             // 
@@ -165,7 +155,6 @@
             this.Controls.Add(this.HourFromUser);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.SaveAttForm3);
             this.Controls.Add(this.Ora);
             this.Controls.Add(this.label1);
@@ -174,6 +163,7 @@
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Attendence";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HourFromUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinsFromUser)).EndInit();
@@ -189,7 +179,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Ora;
         private System.Windows.Forms.Button SaveAttForm3;
-        private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown HourFromUser;

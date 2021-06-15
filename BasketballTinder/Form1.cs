@@ -25,7 +25,7 @@ namespace BasketballTinder
 
         private void creditsBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Designed by: \nRadu Lamoran \nGabriel Palasanu \nDragos Cont \n\n\nGuidance: Bogdan Iuga");
+            MessageBox.Show("Developed by: \nRadu Lamoran \nGabriel Palasanu \nDragos Cont \n\n\nGuidance: Bogdan Iuga");
         }
 
         private void StartApp_Btn_Click(object sender, EventArgs e)

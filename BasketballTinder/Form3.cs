@@ -66,5 +66,12 @@ namespace BasketballTinder
         {
 
         }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+            this.Hide();
+        }
     }
 }

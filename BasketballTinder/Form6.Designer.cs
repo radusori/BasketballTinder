@@ -41,12 +41,13 @@ namespace BasketballTinder
             // 
             // DeleteBTN
             // 
+            this.DeleteBTN.BackColor = System.Drawing.Color.Red;
             this.DeleteBTN.Location = new System.Drawing.Point(12, 405);
             this.DeleteBTN.Name = "DeleteBTN";
             this.DeleteBTN.Size = new System.Drawing.Size(108, 33);
             this.DeleteBTN.TabIndex = 0;
             this.DeleteBTN.Text = "DELETE";
-            this.DeleteBTN.UseVisualStyleBackColor = true;
+            this.DeleteBTN.UseVisualStyleBackColor = false;
             this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
             // label1
@@ -61,13 +62,17 @@ namespace BasketballTinder
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.Bisque;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.UserEmail,
             this.AppointmentDate,
             this.TimeHour,
             this.TimeMins,
             this.TerrainName});
+            this.listView1.FullRowSelect = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
+            this.listView1.HoverSelection = true;
             this.listView1.Location = new System.Drawing.Point(40, 73);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(434, 244);
@@ -82,7 +87,7 @@ namespace BasketballTinder
             // 
             // AppointmentDate
             // 
-            this.AppointmentDate.Text = "Appointment Date";
+            this.AppointmentDate.Text = "Date";
             this.AppointmentDate.Width = 106;
             // 
             // TimeHour
@@ -104,6 +109,7 @@ namespace BasketballTinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(528, 450);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);

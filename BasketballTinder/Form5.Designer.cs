@@ -73,13 +73,14 @@ namespace BasketballTinder
             // 
             // SaveAttForm5
             // 
+            this.SaveAttForm5.BackColor = System.Drawing.Color.DarkOrange;
             this.SaveAttForm5.Location = new System.Drawing.Point(40, 382);
             this.SaveAttForm5.Margin = new System.Windows.Forms.Padding(2);
             this.SaveAttForm5.Name = "SaveAttForm5";
             this.SaveAttForm5.Size = new System.Drawing.Size(132, 40);
             this.SaveAttForm5.TabIndex = 4;
             this.SaveAttForm5.Text = "Update Attendance";
-            this.SaveAttForm5.UseVisualStyleBackColor = true;
+            this.SaveAttForm5.UseVisualStyleBackColor = false;
             this.SaveAttForm5.Click += new System.EventHandler(this.button1_Click);
             // 
             // AttendanceShow
@@ -167,6 +168,7 @@ namespace BasketballTinder
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.Bisque;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.UserEmail,
             this.AppointmentDate,
@@ -210,6 +212,7 @@ namespace BasketballTinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label6);

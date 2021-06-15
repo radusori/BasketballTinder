@@ -146,22 +146,24 @@ namespace BasketballTinder
             // 
             // DeleteAttendanceBtn
             // 
+            this.DeleteAttendanceBtn.BackColor = System.Drawing.Color.Red;
             this.DeleteAttendanceBtn.Location = new System.Drawing.Point(16, 335);
             this.DeleteAttendanceBtn.Name = "DeleteAttendanceBtn";
             this.DeleteAttendanceBtn.Size = new System.Drawing.Size(183, 55);
             this.DeleteAttendanceBtn.TabIndex = 15;
             this.DeleteAttendanceBtn.Text = "DELETE ATTENDENCE";
-            this.DeleteAttendanceBtn.UseVisualStyleBackColor = true;
+            this.DeleteAttendanceBtn.UseVisualStyleBackColor = false;
             this.DeleteAttendanceBtn.Click += new System.EventHandler(this.DeleteAttendanceBtn_Click);
             // 
             // UpdateAttendenceBtn
             // 
+            this.UpdateAttendenceBtn.BackColor = System.Drawing.Color.DarkOrange;
             this.UpdateAttendenceBtn.Location = new System.Drawing.Point(16, 262);
             this.UpdateAttendenceBtn.Name = "UpdateAttendenceBtn";
             this.UpdateAttendenceBtn.Size = new System.Drawing.Size(183, 55);
             this.UpdateAttendenceBtn.TabIndex = 16;
             this.UpdateAttendenceBtn.Text = "UPDATE ATTENDENCE";
-            this.UpdateAttendenceBtn.UseVisualStyleBackColor = true;
+            this.UpdateAttendenceBtn.UseVisualStyleBackColor = false;
             this.UpdateAttendenceBtn.Click += new System.EventHandler(this.UpdateAttendenceBtn_Click);
             // 
             // Form2
